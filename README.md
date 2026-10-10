@@ -2,7 +2,7 @@
 
 > _Projet de BTS (promotion 2021) — un projet réel, avec un vrai client_
 
-![Projet Aquaponie](/ressources/truite_arc_en_ciel.jpg)
+<p style="text-align: center"><img style="height: 400" src="./ressources/truite_arc_en_ciel.jpg"></p>
 
 ## 📋 Vue d'ensemble
 
@@ -118,3 +118,23 @@ flowchart LR
     RP --> SMS[Alertes SMS<br/>au client]
     WEB -. saisie manuelle .-> NIT[Suivi nitrates<br/>saisie manuelle]
 ```
+
+## 🐠 Projet de test dans la classe d'informatique
+
+Impossible de tester notre système directement dans la serre de Lespinassière : elle était à une heure de route, et on ne peut pas déboguer des sockets devant des truites arc-en-ciel. Nous avons donc construit un mock complet de la structure directement dans la classe — bassin en miniature, capteurs branchés, Raspberry en réseau — afin d'avoir quelque chose de vivant à présenter pour la soutenance.
+
+Restait un détail : un système aquaponique sans poisson, ce n'est pas très crédible. Alors ma classe a investi dans l'élément le plus important de toute l'infrastructure : un poisson rouge, acheté pour faire honneur au circuit. Ils l'ont appelé Bob. 🐟
+
+Bob a donc nagé fièrement dans notre bassin de test pendant des semaines, pendant que les capteurs remontaient oxygène, pH, conductivité et température en temps réel. Honnêtement, il a fait office de contrôle qualité : tant que Bob nageait, les taux étaient bons.
+
+À la fin de ce projet de test, l'essentiel du projet aquaponique était déjà fonctionnel — capteurs, transmission par sockets, dashboard, alertes. Il ne restait plus qu'à déplacer les composants dans la véritable serre. (Bob, lui, est resté en classe. Un héros ne quitte jamais son poste.)
+
+|                                                     |                                                                  |
+| --------------------------------------------------- | ---------------------------------------------------------------- |
+| ![Projet Aquaponie](/ressources/env_simulation.jpg) | ![Projet Aquaponie](/ressources/raspberry_capteur_principal.jpg) |
+
+## Code et source
+
+[Voir le code](./aquaponie)
+
+[D'autres photo](./ressources)
